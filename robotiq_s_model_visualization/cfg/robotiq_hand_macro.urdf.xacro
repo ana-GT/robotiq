@@ -10,7 +10,6 @@ there are multiple hands then a prefix followed by an "_" is needed.
 
   <xacro:macro name="robotiq_finger" params="prefix">
     <!-- Link list -->
-
     <!-- Link 0 -->
     <link name="${prefix}link_0">
       <visual>
@@ -689,6 +688,49 @@ there are multiple hands then a prefix followed by an "_" is needed.
       <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
 
+
+    <!-- Added: Color in Gazebo visualization -->
+    <gazebo reference="${prefix}link_0">
+      <material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="${prefix}link_1">
+      <material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="${prefix}link_2">
+      <material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="${prefix}link_3">
+      <material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="${prefix}link_proximal_actuating_hinge">
+      <material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="${prefix}link_paraproximal_actuating_hinge">
+      <material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="${prefix}link_proximal_actuating_bar">
+      <material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="${prefix}link_paraproximal_bar">
+      <material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="${prefix}link_median_actuating_hinge">
+      <material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="${prefix}link_median_bar">
+      <material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="${prefix}link_paramedian_hinge">
+      <material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="${prefix}link_median_bar_underactuated">
+      <material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="${prefix}link_paradistal_hinge">
+      <material>Gazebo/Black</material>
+    </gazebo>
+
+
   </xacro:macro>
 
   <xacro:macro name="robotiq_hand" params="prefix *origin reflect parent">
@@ -786,6 +828,11 @@ there are multiple hands then a prefix followed by an "_" is needed.
       <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
     <!-- end of joint list -->
+
+    <!-- Adding color for Gazebo visualization -->
+    <gazebo reference="${prefix}palm">
+      <material>Gazebo/Black</material>
+    </gazebo>
 
   </xacro:macro>
 
