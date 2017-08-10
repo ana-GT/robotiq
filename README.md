@@ -1,5 +1,7 @@
 # Robotiq
 
+Packages needed to simulate the Robotiq Hand in Gazebo (ignores Ethercat-related packages)
+
 [ROS-Industrial][] robotiq meta-package.  See the [ROS wiki][] page for more information.  
 
 ## Contents
